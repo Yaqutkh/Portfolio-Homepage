@@ -1,0 +1,163 @@
+
+$animation-duration: 0.5s;
+$animation-timing: cubic-bezier(0.25, 0.1, 0.25, 1);
+$animation-distance: 20px;
+
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+@keyframes slide-up {
+  from {
+    transform: translateY($animation-distance);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-$animation-distance);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes slide-left {
+  from {
+    transform: translateX($animation-distance);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(-$animation-distance);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes scale-up {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+@keyframes bio-image {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes bio-content {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes minimize-header {
+  0% {
+    background: transparent;
+    padding: 1rem 0;
+    box-shadow: none;
+  }
+  100% {
+    background: #002d72;
+    padding: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  }
+}
+
+
+@keyframes minimize-header-links {
+  0% {
+    color: #000;
+  }
+  100% {
+    color: #FFF;
+  }
+}
+
+
+@keyframes parallax-banner {
+  to {
+    transform: translateY(calc(var(--speed, -5) * 20rem));
+  }
+}
+
+
+.animate {
+  &--fade {
+    animation: fade-in $animation-duration $animation-timing both;
+  }
+  
+  &--slide-up {
+    animation: slide-up $animation-duration $animation-timing both;
+  }
+  
+  &--slide-down {
+    animation: slide-down $animation-duration $animation-timing both;
+  }
+  
+  &--slide-left {
+    animation: slide-left $animation-duration $animation-timing both;
+  }
+  
+  &--slide-right {
+    animation: slide-right $animation-duration $animation-timing both;
+  }
+  
+  &--scale {
+    animation: scale-up $animation-duration $animation-timing both;
+  }
+}
+
+
+.scroll-animate {
+  opacity: 0;
+  
+  &.animated {
+    opacity: 1;
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .animate,
+  .scroll-animate {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

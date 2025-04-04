@@ -1,0 +1,135 @@
+<!DOCTYPE html lang="en">
+<html>
+    <head>
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="../dist/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body id="body">
+        <a class="skip-main" href="#main" aria-label="Skip to main content">Skip to main content</a>
+        <header>
+            <div class="container">
+                <a href="#" class="header__logo">
+                    <img src="../src/img/logo.jpg" alt="My Portfolio Logo" class="header__logo-image">
+                </a>
+                <nav class="header-nav" aria-label="navigation links">
+                    <ul class="header-nav__menu-items" role="group">
+                        <li class="header-nav__menu-item"><a class="header-nav__link" href="#latest-projects">Certifications</a></li>
+                        <li class="header-nav__menu-item"><a class="header-nav__link" href="#bio">Resume</a></li>
+                        <li class="header-nav__menu-item"><a class="header-nav__link" href="#contact-us">Contact Me</a></li>
+                        <li class="header-nav__menu-item is--mobile">
+                            <div class="menu" role="menu">
+                                <input type="checkbox" id="menu-toggle" class="menu__toggle">
+                                <label for="menu-toggle" class="menu__toggle-label" role="button" arial-label="mobile menu button">
+                                    <span class="menu__bar"></span>
+                                </label>
+                                <nav class="menu__navigation">
+                                    <ul class="menu__menu-item-list" role="group">
+                                        <li class="menu__menu-item" role="menuitem"><a class="menu__menu-link" href="#latest-projects">Certifications</a></li>
+                                        <li class="menu__menu-item" role="menuitem"><a class="menu__menu-link" href="#bio">Resume</a></li>
+                                        <li class="menu__menu-item" role="menuitem"><a class="menu__menu-link" href="#contact-us">Contact Me</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="banner" class="banner">
+            <img src="../src/img/profilo.jpg" alt="Banner background image" class="banner__image">
+            <div class="banner__sphere sphere--one" arial-label="Sphere 1 Icon"></div>
+            <div class="banner__sphere sphere--two" aria-label="Sphere 2 Icon"></div>
+            <div class="banner__sphere sphere--three" aria-label="Sphere 3 Icon"></div>
+            <div class="banner__content">
+                <h1>Welcome to My Portfolio</h1>
+                <p>My name is Yaqut Khallaf, and I am a Computer Engineering student in Palestine University. This is my portfolio that contains three projects.</p>
+            </div>
+        </div>
+        <main id="main" tabindex="-1">
+            <section id="latest-projects" class="latest-projects">
+                <div class="container">
+                    <h2 class="latest-projects__headline">Certifications</h2>
+                    <div class="project-card">
+                        <a class="project-card__link" aria-label="go to project 1 detail page" href="#">
+                            <img src="../src/img/cer1.jpeg" alt="Project 1" class="project-card__image">
+                            <div class="project-card__content">
+                                <h3 class="project-card__title">Chat GPT VS DeepSeek</h3>
+                                <p class="project-card__description">Participating in the Chat GPT vs. DeepSeek, coordinated by Eng. Ammar Yaseer</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <a class="project-card__link" aria-label="go to project 2 detail page" href="#">
+                            <img src="../src/img/cre2.jpeg" alt="Project 2" class="project-card__image">
+                            <div class="project-card__content">
+                                <h3 class="project-card__title">Generative AI Session</h3>
+                                <p class="project-card__description">Participating in the Generative AI, coordinated in Zoom meeting by Dr. Izzdin Teeti, and organized by IEEE PPU student on 27 Feb 2025</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <a class="project-card__link" aria-label="go to project 3 detail page" href="#">
+                            <img src="../src/img/cer3.jpeg" alt="Project 3" class="project-card__image">
+                            <div class="project-card__content">
+                                <h3 class="project-card__title">Robotics and Intelligent System</h3>
+                                <p class="project-card__description">Participating in the Robotics and Intelligent System, coordinated in PPU, by Eng. Wael Takrouri</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="latest-projects__btn-container">
+                        <a class="primary-btn" href="#latest-projects">See All Certifications</a>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="bio">
+                <div class="container">
+                    <div class="bio">
+                        <div class="bio__image-container">
+                            <img src="../src/img/photo.jpg" class="bio__image" width="650" height="650" alt="Profile Image">
+                        </div>
+                        <div class="bio__content">
+                            <h2 class="bio__headline">About Me</h2>
+                            <p class="bio__description">My name is Yaqut Khallaf, and I am a web developer. I am a student in PPU. I have experience in C++, Java programming, CSS, JavaScript, and PHP. I have worked on a variety of projects and am always learning new technologies. I'm looking forward to connecting and learning from others in the tech field.</p>
+                            <div class="bio__content__ctas">
+                                <a download class="primary-btn" href="#bio" aria-label="Download my resume">Download Resume</a>
+                                <a class="secondary-btn" href="https://github.com/Yaqutkh">View Github Portfolio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact-us" class="contact-us">
+                <div class="container">
+                    <h2 class="contact-us__headline">Contact Me</h2>
+                    <p class="contact-us__description">If you wish to inquire about a potential job opportunity, fill out this form below and I will get back to you in a timely manner.</p>
+                    <form action="https://formspree.io/f/mwkjzryj" method="POST" class="contact-us__form-container">
+                        <label for="name" class="contact-us__label">Name<span class="label--required">*</span></label>
+                        <input class="contact-us__input" type="text" id="name" name="name" required>
+                        <label for="email" class="contact-us__label">Email<span class="label--required">*</span></label>
+                        <input class="contact-us__input" type="email" id="email" name="email" required>
+                        <label for="phone" class="contact-us__label">Phone Number<span class="label--required">*</span></label>
+                        <input class="contact-us__input" type="tel" id="phone" name="phone" required>
+                        <label for="title" class="contact-us__label">Title</label>
+                        <input class="contact-us__input" type="text" id="title" name="title">
+                        <label for="message" class="contact-us__label">Message <span class="label--required">*</span></label>
+                        <textarea id="message" class="contact-us__text-area" name="message" required></textarea>
+                        <button type="submit" class="primary-btn contact-us__submit-btn">Submit</button>
+                    </form>
+                    
+                </div>
+            </section>
+        </main>
+        
+        <footer class="footer">
+            <ul class="footer__content">
+                <li class="footer__content-item">&copy; 2024 My Portfolio</li>
+                <li class="footer__content-item"><a href="#contact-us" class="footer__contact-link">Contact Me</a></li>
+            </ul>
+        </footer>
+
+    </body>
+</html>

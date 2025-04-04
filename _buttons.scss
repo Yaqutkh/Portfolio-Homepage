@@ -1,0 +1,58 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+@mixin button-transition {
+  transition: all 0.3s ease;
+}
+.btn {
+  padding: 1rem 2rem;
+  border-radius: $border-radius;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+
+  &-primary {
+    background-color: $primary-color;
+    color: $white-color;
+    
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+
+  &-secondary {
+    background-color: $secondary-color;
+    color: $white-color;
+    
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+    }
+  }
+  &-outline {
+    background-color: transparent;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+    
+    &:hover {
+      background-color: $primary-color;
+      color: $white-color;
+    }
+  }
+  &-large {
+    padding: 1.5rem 3rem;
+    font-size: 1.2rem;
+  }
+  &-small {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+.btn-success {
+  background-color: $green-color;
+  color: $white-color;
+  
+  &:hover {
+    background-color: darken($green-color, 10%);
+  }
+}

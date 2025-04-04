@@ -1,0 +1,103 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.intro-banner {
+  @include center-flex;
+  padding: $spacing-large;
+  background-color: $primary-color;
+  color: $white-color;
+  min-height: 80vh;
+  position: relative;
+
+ 
+  @include animate('slide-up');
+
+  &__content {
+    @include center-flex;
+    flex-direction: column;
+    text-align: center;
+
+    @include respond-to('tablet') {
+      flex-direction: row;
+      text-align: left;
+    }
+  }
+
+  &__img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: $spacing-medium;
+
+    @include respond-to('tablet') {
+      margin-right: $spacing-large;
+      margin-bottom: 0;
+    }
+
+   
+    @include animate('scale');
+  }
+
+  &__text {
+    h1 {
+      font-size: 3.2rem;
+      margin-bottom: $spacing-medium;
+    }
+
+    p {
+      font-size: 1.8rem;
+      margin-bottom: $spacing-medium;
+    }
+
+    @include respond-to('tablet') {
+      h1 {
+        font-size: 4rem;
+      }
+
+      p {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .btn-primary {
+    background-color: $primary-color;
+    color: $white-color;
+    border: 2px solid $white-color;
+    padding: $spacing-small $spacing-medium;
+    margin-right: $spacing-small;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+      border-color: darken($primary-color, 10%);
+      transform: scale(1.05);
+    }
+  }
+
+  .btn-secondary {
+    background-color: $secondary-color;
+    color: $white-color;
+    padding: $spacing-small $spacing-medium;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+      transform: scale(1.05);
+    }
+  }
+}
+
+
+@mixin animate($type) {
+  @if $type == 'slide-up' {
+    animation: slide-up $animation-duration $animation-timing both;
+  } @else if $type == 'scale' {
+    animation: scale-up $animation-duration $animation-timing both;
+  }
+}
+
+  
+
+  

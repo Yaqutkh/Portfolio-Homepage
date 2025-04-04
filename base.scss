@@ -1,0 +1,29 @@
+@use '../utils/variables' as *; 
+
+
+button {
+  background-color: $button-bg-color;
+  color: $button-text-color;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    background-color: color.adjust($button-bg-color, $lightness: -10%);  
+    transform: scale(1.05);  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba($primary-color, 0.5); 
+  }
+}
+
+
+
+
+
+  

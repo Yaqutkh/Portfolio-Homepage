@@ -1,0 +1,110 @@
+@use '../utils/variables' as *;
+.section {
+    padding: $spacing-large 0;
+    background-color: $background-color;
+    margin-bottom: $spacing-large;
+    &--dark {
+        background-color: $primary-color;
+        color: $white-color;
+      }
+      &--light {
+        background-color: $white-color;
+        color: $text-color;
+      }
+      &--full-height {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .section-hero {
+        background-color: $primary-color;
+        color: $white-color;
+        padding: $spacing-large 0;
+        text-align: center;
+      
+        .section-hero__title {
+          font-size: 3rem;
+          font-weight: bold;
+          margin-bottom: $spacing-medium;
+        }
+        .section-hero__subtitle {
+            font-size: 1.5rem;
+            margin-bottom: $spacing-large;
+          }
+        }
+        .section-about {
+            display: grid;
+            gap: $spacing-medium;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+          
+            .section-about__text {
+              font-size: 1.2rem;
+              color: $text-color;
+            }
+          
+            .section-about__image {
+              max-width: 100%;
+              border-radius: $border-radius;
+            }
+            @media (max-width: 768px) {
+                grid-template-columns: 1fr;
+              }
+            }
+            .section-contact {
+                background-color: $secondary-color;
+                color: $white-color;
+                padding: $spacing-large 0;
+                text-align: center;
+              
+                .section-contact__form {
+                  display: flex;
+                  flex-direction: column;
+                  gap: $spacing-small;
+                  max-width: 500px;
+                  margin: 0 auto;
+                  input, textarea {
+                    padding: $spacing-small;
+                    border: 1px solid $gray-color;
+                    border-radius: $border-radius;
+                    font-size: 1rem;
+                  }
+                  button {
+                    background-color: $primary-color;
+                    color: $white-color;
+                    padding: $spacing-small;
+                    border: none;
+                    border-radius: $border-radius;
+                    cursor: pointer;
+              
+                    &:hover {
+                      background-color: $secondary-color;
+                    }
+                  }
+                }
+              }
+              .section-cta {
+                background-color: $button-bg-color;
+                color: $button-text-color;
+                padding: $spacing-large 0;
+                text-align: center;
+              
+                .section-cta__title {
+                  font-size: 2rem;
+                  margin-bottom: $spacing-medium;
+                }
+                .section-cta__button {
+                    background-color: $button-text-color;
+                    color: $button-bg-color;
+                    padding: $spacing-small $spacing-medium;
+                    border: none;
+                    border-radius: $border-radius;
+                    cursor: pointer;
+                
+                    &:hover {
+                      background-color: $primary-color;
+                    }
+                  }
+                }

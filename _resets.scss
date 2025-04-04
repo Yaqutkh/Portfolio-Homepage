@@ -1,0 +1,59 @@
+@use '../utils/variables' as *;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  background-color: $primary-color;
+  color: $white-color;
+  border: none;
+  padding: $spacing-small $spacing-medium;
+  font-size: 1.6rem;
+  cursor: pointer;
+  border-radius: $border-radius;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);  
+  }
+}
+
+
+@media (max-width: 768px) {
+  body {
+    font-size: 1.4rem; 
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 1.2rem; 
+  }
+}

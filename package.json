@@ -1,0 +1,23 @@
+{
+  "name": "portfolio-homepage",
+  "version": "1.0.0",
+  "description": "Portfolio Homepage project",
+  "scripts": {
+    "clean": "rimraf dist",  
+    "build": "npm run clean && sass src/scss/main.scss dist/main.css && postcss dist/main.css -o dist/main.css", 
+    "watch": "sass --watch src/scss/main.scss:dist/main.css",
+    "start": "npm run build && live-server dist" 
+  },
+  "devDependencies": {
+    "sass": "^1.86.0",
+    "rimraf": "^5.0.0",  
+    "postcss": "^8.4.24", 
+    "autoprefixer": "^10.4.7", 
+    "live-server": "^1.2.1"  
+  }
+}
+
+
+
+
+

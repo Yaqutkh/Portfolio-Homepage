@@ -1,0 +1,58 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.projects-cards {
+  display: flex;
+  justify-content: space-around;
+  margin-top: $spacing-large;
+  flex-wrap: wrap;
+  gap: $spacing-medium;
+}
+
+.project-card {
+  background-color: $white-color;
+  width: 100%;
+  padding: $spacing-medium;
+  text-align: center;
+  border-radius: $border-radius;
+  @include box-shadow(1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; 
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: $border-radius;
+    margin-bottom: $spacing-small;
+    transition: transform 0.3s ease; 
+  }
+
+  h3 {
+    font-size: 1.8rem;
+    margin: $spacing-small 0;
+    color: $primary-color;
+  }
+
+  p {
+    font-size: 1.4rem;
+    color: $gray-color;
+    margin-bottom: $spacing-small;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    @include box-shadow(2);
+    background-color: lighten($primary-color, 40%);
+    
+    img {
+      transform: scale(1.05); 
+    }
+  }
+
+  @include respond-to('tablet') {
+    width: calc(50% - #{$spacing-medium});
+  }
+
+  @include respond-to('desktop') {
+    width: calc(33.33% - #{$spacing-medium});
+  }
+}
